@@ -30,10 +30,10 @@ export default function Navbar() {
     <div>
       <ul
         className={clsx(
-          "gap-12 md:flex absolute bottom-0 h-screen top-0 right-0 md:py-12 md:pr-28",
+          "gap-12 md:flex absolute bottom-0 md:max-h-24 top-0 right-0 md:py-10 md:px-12 lg:pr-[165px] lg:pl-[123px] bg-navbar backdrop-blur-[41px] lg:mt-10",
           {
             "hidden md:flex": !isMenuOpen,
-            "backdrop-blur-xl opacity-100 py-28 px-8 w-[254px]": isMenuOpen,
+            "opacity-100 py-28 px-8 w-[254px] h-screen": isMenuOpen,
           }
         )}
       >

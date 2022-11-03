@@ -7,7 +7,12 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: { dark: "#0B0D17", lilac: "#D0D6F9", light: "#FFFFFF" },
+      colors: {
+        dark: "#0B0D17",
+        lilac: "#D0D6F9",
+        light: "#FFFFFF",
+        navbar: "rgba(255, 255, 255, 0.04)",
+      },
       fontFamily: {
         bellefair: "'Bellefair', serif",
         barlow: "'Barlow Condensed', sans-serif",
