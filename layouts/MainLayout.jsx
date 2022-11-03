@@ -9,7 +9,7 @@ export default function MainLayout(props) {
   return (
     <div
       className={clsx(
-        "min-h-screen flex flex-col w-full bg-cover font-white",
+        "min-h-screen h-full flex flex-col w-full bg-cover font-white",
         props.className
       )}
     >
