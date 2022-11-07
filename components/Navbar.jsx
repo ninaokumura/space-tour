@@ -3,6 +3,7 @@ import Image from "next/image";
 import close from "../public/assets/shared/icon-close.svg";
 import menu from "../public/assets/shared/icon-hamburger.svg";
 import clsx from "clsx";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,18 +12,22 @@ export default function Navbar() {
     {
       num: "00",
       label: "Home",
+      href: "/",
     },
     {
       num: "01",
       label: "Destination",
+      href: "/destination",
     },
     {
       num: "02",
       label: "Crew",
+      href: "/crew",
     },
     {
       num: "03",
       label: "Technology",
+      href: "/technology",
     },
   ];
 
@@ -40,10 +45,16 @@ export default function Navbar() {
         {links.map(link => (
           <li
             key={link.num}
-            className="flex gap-4 font-barlow pb-8 text-light text-base tracking-[2.7px]"
+            className="font-barlow pb-8 text-light text-base tracking-[2.7px]"
           >
-            <span className="md:hidden lg:flex font-semibold">{link.num}</span>
-            <span>{link.label.toUpperCase()}</span>
+            <Link href={link.href}>
+              <a className="flex gap-4">
+                <span className="md:hidden lg:flex font-semibold">
+                  {link.num}
+                </span>
+                <span>{link.label.toUpperCase()}</span>
+              </a>
+            </Link>
           </li>
         ))}
       </ul>

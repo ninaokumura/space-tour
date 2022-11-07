@@ -3,7 +3,10 @@ import MainLayout from "../layouts/MainLayout";
 
 export default function Home() {
   return (
-    <MainLayout className="bg-home-mobile md:bg-home-tablet lg:bg-home-desktop">
+    <MainLayout
+      className="bg-home-mobile md:bg-home-tablet lg:bg-home-desktop"
+      title="Home"
+    >
       <div className="pt-[55px] md:pt-[106px] lg:pt-[251px] lg:pb-[131px] flex flex-col lg:flex-row lg:justify-around gap-20 md:gap-[156px] lg:items-end">
         <div className="max-w-[327px] md:max-w-[450px] mx-auto lg:mx-0">
           <p className="uppercase font-barlow text-base md:text-[20px] text-center tracking-[2.7px] text-lilac lg:text-justify lg:text-[28px]">
