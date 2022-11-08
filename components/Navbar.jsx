@@ -32,13 +32,13 @@ export default function Navbar() {
   ];
 
   return (
-    <div>
+    <div className="">
       <ul
         className={clsx(
           "gap-12 md:flex absolute bottom-0 md:max-h-24 top-0 right-0 md:py-10 md:px-12 lg:pr-[165px] lg:pl-[123px] bg-navbar backdrop-blur-[41px] lg:mt-10",
           {
             "hidden md:flex": !isMenuOpen,
-            "opacity-100 py-28 px-8 w-[254px] h-screen": isMenuOpen,
+            "opacity-100 py-28 px-8 w-[254px] z-10": isMenuOpen,
           }
         )}
       >
@@ -59,7 +59,7 @@ export default function Navbar() {
         ))}
       </ul>
 
-      <div className="md:hidden">
+      <div className="md:hidden absolute top-8 right-6 z-20">
         <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
           {isMenuOpen ? <Image src={close} /> : <Image src={menu} />}
         </button>
