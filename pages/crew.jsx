@@ -1,4 +1,5 @@
 import React from "react";
+import CrewCarousel from "../components/CrewCarousel";
 import MainLayout from "../layouts/MainLayout";
 
 export default function crew() {
@@ -7,7 +8,7 @@ export default function crew() {
       className="bg-crew-mobile md:bg-crew-tablet lg:bg-crew-desktop"
       title="Crew"
     >
-      crew
+      <CrewCarousel />
     </MainLayout>
   );
 }
