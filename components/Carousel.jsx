@@ -1,52 +1,13 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import data from "../data/data.json";
-import Link from "next/link";
+import data from "../data/data";
 import clsx from "clsx";
-
-const destinations = [
-  {
-    name: "Moon",
-    images: "/assets/destination/image-moon.png",
-    // webp: "../public/assets/destination/image-moon.webp",
-    description:
-      "See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.",
-    distance: "384,400 km",
-    travel: "3 days",
-  },
-  {
-    name: "Mars",
-    images: "/assets/destination/image-mars.png",
-    // webp: "../public/assets/destination/image-mars.webp",
-    description:
-      "Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!",
-    distance: "225 mil. km",
-    travel: "9 months",
-  },
-  {
-    name: "Europa",
-    images: "/assets/destination/image-europa.png",
-    // webp: "../public/assets/destination/image-europa.webp",
-    description:
-      "The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.",
-    distance: "628 mil. km",
-    travel: "3 years",
-  },
-  {
-    name: "Titan",
-    images: "/assets/destination/image-titan.png",
-    // webp: "../public/assets/destination/image-titan.webp",
-    description:
-      "The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.",
-    distance: "1.6 bil. km",
-    travel: "7 years",
-  },
-];
 
 export default function Carousel() {
   const [selectedName, setSelectedName] = useState("Moon");
 
-  const selectedDestination = destinations.find(
+  console.log(data.destinations);
+  const selectedDestination = data.destinations.find(
     destination => destination.name === selectedName
   );
 
@@ -64,26 +25,23 @@ export default function Carousel() {
       <div className="lg:flex lg:justify-around">
         <div className="md:w-[300px] md:h-[300px] w-[170px] h-[170px] lg:w-[445px] lg:h-[445px] mx-auto lg:mx-0">
           <Image
-            src={selectedDestination.images}
+            src={selectedDestination.images.png}
             width="170px"
             height="170px"
             layout="responsive"
           />
         </div>
 
-        <div className="">
+        <div>
           <div className="lg:w-[445px] lg:text-left">
-            <ul className="justify-center flex gap-6 lg:justify-start md:pt-12 py-6">
-              {destinations.map(destination => (
+            <ul className="justify-center flex gap-6 md:gap-9 lg:justify-start md:pt-12 py-6">
+              {data.destinations.map(destination => (
                 <li
                   className={clsx("uppercase", {
                     "border-b": selectedName === destination.name,
                   })}
                 >
-                  <button
-                    className=""
-                    onClick={() => setSelectedName(destination.name)}
-                  >
+                  <button onClick={() => setSelectedName(destination.name)}>
                     {destination.name}
                   </button>
                 </li>
