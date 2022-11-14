@@ -32,7 +32,7 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="">
+    <div className="w-full">
       <ul
         className={clsx(
           "gap-12 md:flex absolute bottom-0 md:max-h-24 top-0 right-0 md:py-10 md:px-12 lg:pr-[165px] lg:pl-[123px] bg-navbar backdrop-blur-[41px] lg:mt-10",
