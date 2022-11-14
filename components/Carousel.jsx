@@ -17,7 +17,7 @@ export default function Carousel() {
         <span className="font-semibold text-light opacity-[0.25]  md:text-xl lg:text-2xl">
           01
         </span>
-        <span className="tracking-[2.7px] md:text-xl lg:text-2xl">
+        <span className="tracking-[2.7px] md:text-xl lg:text-2xl uppercase">
           Pick your destination
         </span>
       </div>
