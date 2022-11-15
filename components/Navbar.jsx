@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import close from "../public/assets/shared/icon-close.svg";
 import menu from "../public/assets/shared/icon-hamburger.svg";
 import clsx from "clsx";
@@ -7,6 +8,9 @@ import Link from "next/link";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [selectedLink, setSelectedLink] = useState("/");
+
+  const router = useRouter();
 
   const links = [
     {
@@ -45,7 +49,12 @@ export default function Navbar() {
         {links.map(link => (
           <li
             key={link.num}
-            className="font-barlow pb-8 text-light text-base tracking-[2.7px]"
+            className={clsx(
+              "font-barlow pb-8 text-light text-base tracking-[2.7px]",
+              {
+                "border-b-2": link.href === router.asPath,
+              }
+            )}
           >
             <Link href={link.href}>
               <a className="flex gap-4">

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import data from "../data/data";
+import clsx from "clsx";
 
 export default function CrewCarousel() {
   const [selectedStaff, setSelectedStaff] = useState("Douglas Hurley");
@@ -19,7 +20,7 @@ export default function CrewCarousel() {
       </div>
 
       <div className="md:flex h-screen md:flex-col-reverse md:justify-start lg:flex-row-reverse lg:items-end">
-        <div className="border-b border-[#383B4B] mx-auto md:border-0">
+        <div className="border-b border-[#383B4B] mx-auto md:border-0 lg:px-36">
           <div className="relative w-[177px] h-[222px] mx-auto md:w-[400px] md:h-[654px] md:pt-28 bottom-0">
             <Image
               src={selectedCrew.images.png}
@@ -32,12 +33,17 @@ export default function CrewCarousel() {
           </div>
         </div>
 
-        <div className="flex flex-col-reverse lg:max-w-[588px]">
+        <div className="flex flex-col-reverse">
           <ul className="text-light flex gap-4 justify-center lg:justify-start pb-24 lg:px-40 lg:pt-24 lg:pb-8">
             {data.crew.map(staff => (
               <li key={staff.name} className="py-6">
                 <button
-                  className="rounded-full bg-light h-2.5 w-2.5"
+                  className={clsx(
+                    "rounded-full bg-light h-2.5 w-2.5 opacity-[0.17]",
+                    {
+                      "bg-light opacity-[1]": staff.name === selectedStaff,
+                    }
+                  )}
                   onClick={() => setSelectedStaff(staff.name)}
                 ></button>
               </li>
@@ -51,7 +57,8 @@ export default function CrewCarousel() {
             <h1 className="text-lg uppercase font-bellefair opacity-[0.5] md:text-4xl pt-2 lg:pl-40 lg:text-5xl">
               {selectedCrew.name}
             </h1>
-            <p className="text-sm font-barlow text-lilac px-6 pt-4 md:px-40">
+
+            <p className="text-sm font-barlow text-lilac px-6 pt-4 md:px-40 lg:px-40 xl:pl-81">
               {selectedCrew.bio}
             </p>
           </div>
