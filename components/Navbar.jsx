@@ -8,7 +8,6 @@ import Link from "next/link";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [selectedLink, setSelectedLink] = useState("/");
 
   const router = useRouter();
 
@@ -52,7 +51,7 @@ export default function Navbar() {
             className={clsx(
               "font-barlow pb-8 text-light text-base tracking-[2.7px]",
               {
-                "border-b-2": link.href === router.asPath,
+                "md:border-b-2": link.href === router.asPath,
               }
             )}
           >

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import data from "../data/data";
 import clsx from "clsx";
+import Title from "./Title";
 
 export default function Carousel() {
   const [selectedName, setSelectedName] = useState("Moon");
@@ -13,15 +14,7 @@ export default function Carousel() {
 
   return (
     <div className="text-light font-barlow flex-col flex gap-7">
-      <div className="flex justify-center md:justify-start md:px-9 gap-5 text-base md:py-10 lg:px-40 lg:py-20">
-        <span className="font-semibold text-light opacity-[0.25]  md:text-xl lg:text-2xl">
-          01
-        </span>
-        <span className="tracking-[2.7px] md:text-xl lg:text-2xl uppercase">
-          Pick your destination
-        </span>
-      </div>
-
+      <Title num="01" title="Pick your destination" />
       <div className="lg:flex lg:justify-around">
         <div className="md:w-[300px] md:h-[300px] w-[170px] h-[170px] lg:w-[445px] lg:h-[445px] mx-auto lg:mx-0">
           <Image
