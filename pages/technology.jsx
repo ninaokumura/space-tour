@@ -29,7 +29,7 @@ export default function Technology() {
             </div>
           </div>
 
-          <div className="lg:flex lg:gap-8 lg:pl-40 md:gap-8">
+          <div className="lg:flex lg:gap-20 lg:pl-40 md:gap-8">
             <ul className="flex justify-center gap-4 lg:flex-col lg:items-center">
               {data.technology.map((t, idx) => (
                 <li key={t.name}>
@@ -47,7 +47,7 @@ export default function Technology() {
               ))}
             </ul>
 
-            <div className="md:pt-11 pt-6">
+            <div className="md:pt-11 pt-6 lg:pt-0">
               <TechContent
                 name={selectedTech.name}
                 description={selectedTech.description}
