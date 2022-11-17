@@ -7,7 +7,7 @@ import TechContent from "../components/TechContent";
 import Button from "../components/Button";
 import clsx from "clsx";
 
-export default function technology() {
+export default function Technology() {
   const [tech, setTech] = useState("Launch vehicle");
   const selectedTech = data.technology.find(t => t.name === tech);
 

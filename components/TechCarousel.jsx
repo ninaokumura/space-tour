@@ -11,7 +11,12 @@ export default function TechCarousel({ className, ...props }) {
       )}
     >
       <div>
-        <Image src={props.src} layout="fill" objectFit="cover" />
+        <Image
+          src={props.src}
+          layout="fill"
+          objectFit="cover"
+          alt={props.alt}
+        />
       </div>
     </div>
   );

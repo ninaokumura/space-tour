@@ -15,6 +15,7 @@ export default function CrewCarousel({ className, ...props }) {
         layout="fill"
         objectFit="contain"
         objectPosition="bottom"
+        alt={props.src}
       />
     </div>
   );

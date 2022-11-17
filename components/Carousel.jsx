@@ -7,7 +7,6 @@ import Title from "./Title";
 export default function Carousel() {
   const [selectedName, setSelectedName] = useState("Moon");
 
-  console.log(data.destinations);
   const selectedDestination = data.destinations.find(
     destination => destination.name === selectedName
   );
@@ -30,6 +29,7 @@ export default function Carousel() {
             <ul className="justify-center flex gap-6 md:gap-9 lg:justify-start md:pt-12 py-6">
               {data.destinations.map(destination => (
                 <li
+                  key={destination.name}
                   className={clsx("uppercase", {
                     "border-b": selectedName === destination.name,
                   })}

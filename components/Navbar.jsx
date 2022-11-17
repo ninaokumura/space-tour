@@ -69,7 +69,11 @@ export default function Navbar() {
 
       <div className="md:hidden absolute top-8 right-6 z-20">
         <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
-          {isMenuOpen ? <Image src={close} /> : <Image src={menu} />}
+          {isMenuOpen ? (
+            <Image src={close} alt="close icon" />
+          ) : (
+            <Image src={menu} alt="menu icon" />
+          )}
         </button>
       </div>
     </div>

@@ -10,7 +10,7 @@ export default function Home() {
       <div className="pt-[55px] md:pt-[106px] lg:pt-[251px] lg:pb-[131px] flex flex-col lg:flex-row lg:justify-around gap-20 md:gap-[156px] lg:items-end">
         <div className="max-w-[327px] md:max-w-[450px] mx-auto lg:mx-0">
           <p className="uppercase font-barlow text-base md:text-[20px] text-center tracking-[2.7px] text-lilac lg:text-justify lg:text-[28px]">
-            So, you want to travel to{" "}
+            So, you want to travel to
           </p>
           <h1 className="uppercase font-bellefair text-[80px] md:text-[150px] text-center text-light lg:text-justify">
             Space

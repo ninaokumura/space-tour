@@ -6,7 +6,7 @@ import clsx from "clsx";
 import data from "../data/data";
 import MainLayout from "../layouts/MainLayout";
 
-export default function crew() {
+export default function Crew() {
   const [selectedStaff, setSelectedStaff] = useState("Douglas Hurley");
   const selectedCrew = data.crew.find(staff => staff.name === selectedStaff);
 
