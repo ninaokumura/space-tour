@@ -23,7 +23,7 @@ export default function Home() {
           </p>
         </div>
         <div>
-          <Button />
+          <Button title="Explore" className="bg-light" />
         </div>
       </div>
     </MainLayout>
