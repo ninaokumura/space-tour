@@ -6,7 +6,7 @@ export default function TechCarousel({ className, ...props }) {
   return (
     <div
       className={clsx(
-        "relative min-w-full w-[375px] h-[170px] md:h-[310px] md:w-[768px] lg:w-[515px] lg:h-[527px]",
+        "relative min-w-full w-full h-[170px] md:h-[310px] lg:w-[515px] lg:h-[527px]",
         className
       )}
     >
