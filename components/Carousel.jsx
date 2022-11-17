@@ -21,6 +21,7 @@ export default function Carousel() {
             width="170px"
             height="170px"
             layout="responsive"
+            alt="destination planet"
           />
         </div>
 
