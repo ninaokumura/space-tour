@@ -20,16 +20,18 @@ export default function Destination() {
       <div className="">
         <Title num="01" title="Pick your destination" />
 
-        <div className="flex flex-col gap-6 pt-9  lg:gap-40 lg:flex-row lg:justify-evenly lg:pt-24">
-          <div className="md:w-[300px] md:h-[300px] w-[170px] h-[170px] lg:w-[445px] lg:h-[445px] mx-auto lg:mx-0 relative">
+        <div className="flex flex-col gap-6 pt-9 lg:gap-40 lg:flex-row lg:justify-evenly lg:mt-32 lg:items-center lg:absolute lg:w-full lg:bottom-0 lg:top-0 lg:my-auto">
+          <div>
             <Carousel
               src={selectedDestination.images.png}
               width="170px"
               height="170px"
               layout="fill"
               objectFit="contain"
+              className="md:w-[300px] md:h-[300px] w-[170px] h-[170px] lg:w-[445px] lg:h-[445px] mx-auto lg:mx-0 relative"
             />
           </div>
+
           <div className="">
             <ul className="justify-center flex gap-6 md:gap-9 lg:justify-start md:pt-12 py-6 text-light font-barlow">
               {data.destinations.map(destination => (
@@ -46,7 +48,6 @@ export default function Destination() {
               ))}
             </ul>
             <PageContent
-              role="The terminology..."
               name={selectedDestination.name}
               description={selectedDestination.description}
             />

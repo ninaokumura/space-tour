@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import TechCarousel from "../components/TechCarousel";
 import Title from "../components/Title";
 import MainLayout from "../layouts/MainLayout";
 import data from "../data/data";
 import Button from "../components/Button";
 import clsx from "clsx";
 import PageContent from "../components/PageContent";
+import Carousel from "../components/Carousel";
 
 export default function Technology() {
   const [tech, setTech] = useState("Launch vehicle");
@@ -16,17 +16,26 @@ export default function Technology() {
       className="bg-technology-mobile md:bg-technology-tablet lg:bg-technology-desktop"
       title="technology"
     >
-      <div className="lg:pb-24">
+      <div className="lg:pb-24 pb-8">
         <Title num="03" title="Space Launch 101" />
 
-        <div className="lg:flex lg:flex-row-reverse lg:justify-between lg:items-center  lg:absolute w-full bottom-0">
-          <div className="md:py-14 py-8">
-            <div className="lg:hidden">
-              <TechCarousel src={selectedTech.images.landscape} alt="tech" />
-            </div>
-            <div className="hidden lg:block">
-              <TechCarousel src={selectedTech.images.portrait} alt="tech" />
-            </div>
+        <div className="lg:flex lg:flex-row-reverse lg:justify-between lg:items-center  w-full lg:absolute bottom-0">
+          <div className="md:py-14 relative my-8 lg:my-0 lg:py-0 lg:mb-12">
+            <Carousel
+              src={selectedTech.images.landscape}
+              layout="fill"
+              objectFit="cover"
+              alt="tech"
+              className="min-w-full w-full h-[170px] md:h-[310px] lg:hidden"
+            />
+
+            <Carousel
+              src={selectedTech.images.portrait}
+              layout="fill"
+              objectFit="cover"
+              alt="tech"
+              className="hidden lg:block lg:w-[515px] lg:h-[527px]"
+            />
           </div>
 
           <div className="lg:flex lg:gap-20 lg:pl-40 md:gap-8">

@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import Image from "next/image";
+import clsx from "clsx";
 
 export default function Carousel({ className, ...props }) {
   return (
-    <div>
+    <div className={clsx("", className)}>
       <Image
         src={props.src}
         width={props.width}
@@ -13,16 +14,5 @@ export default function Carousel({ className, ...props }) {
         alt={props.alt}
       />
     </div>
-
-    // <div className="relative md:w-[300px] md:h-[300px] w-[170px] h-[170px] lg:w-[445px] lg:h-[445px] mx-auto lg:mx-0">
-    //   <Image
-    //     src={props.src}
-    // width="170px"
-    // height="170px"
-    // layout="fill"
-    // objectFit="contain"
-    //     alt={props.alt}
-    //   />
-    // </div>
   );
 }

@@ -7,7 +7,7 @@ export default function Home() {
       className="bg-home-mobile md:bg-home-tablet lg:bg-home-desktop"
       title="Home"
     >
-      <div className="pt-[55px] md:pt-[106px] lg:pt-[251px] lg:pb-[131px] flex flex-col lg:flex-row lg:justify-around gap-20 md:gap-[156px] lg:items-end">
+      <div className="pt-[55px] md:pt-[106px] lg:mt-[251px] lg:pb-[131px] flex flex-col lg:flex-row lg:justify-evenly lg:items-center gap-20 md:gap-[156px] lg:bottom-0 lg:absolute w-full lg:my-auto lg:top-0">
         <div className="max-w-[327px] md:max-w-[450px] mx-auto lg:mx-0">
           <p className="uppercase font-barlow text-base md:text-[20px] text-center tracking-[2.7px] text-lilac lg:text-justify lg:text-[28px]">
             So, you want to travel to
