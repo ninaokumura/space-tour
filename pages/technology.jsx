@@ -3,9 +3,9 @@ import TechCarousel from "../components/TechCarousel";
 import Title from "../components/Title";
 import MainLayout from "../layouts/MainLayout";
 import data from "../data/data";
-import TechContent from "../components/TechContent";
 import Button from "../components/Button";
 import clsx from "clsx";
+import PageContent from "../components/PageContent";
 
 export default function Technology() {
   const [tech, setTech] = useState("Launch vehicle");
@@ -48,7 +48,8 @@ export default function Technology() {
             </ul>
 
             <div className="md:pt-11 pt-6 lg:pt-0">
-              <TechContent
+              <PageContent
+                role="The terminology..."
                 name={selectedTech.name}
                 description={selectedTech.description}
               />

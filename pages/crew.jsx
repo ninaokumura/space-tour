@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import CrewCarousel from "../components/CrewCarousel";
-import CrewContent from "../components/CrewContent";
 import Title from "../components/Title";
 import clsx from "clsx";
 import data from "../data/data";
 import MainLayout from "../layouts/MainLayout";
+import PageContent from "../components/PageContent";
 
 export default function Crew() {
   const [selectedStaff, setSelectedStaff] = useState("Douglas Hurley");
@@ -39,10 +39,10 @@ export default function Crew() {
             ))}
           </ul>
 
-          <CrewContent
+          <PageContent
             role={selectedCrew.role}
             name={selectedCrew.name}
-            bio={selectedCrew.bio}
+            description={selectedCrew.bio}
           />
         </div>
       </div>
