@@ -16,17 +16,17 @@ export default function Crew() {
       title="Crew"
     >
       <Title num="02" title="Meet the crew" />
-      <div className="md:flex md:flex-col-reverse md:pt-14 lg:flex-row-reverse lg:items-center md:absolute md:bottom-0 lg:px-40 justify-between w-full">
+      <div className="md:flex md:flex-col-reverse md:pt-14 lg:flex-row-reverse lg:items-center md:absolute md:bottom-0 lg:px-40 justify-between w-full px-6">
         <Carousel
           src={selectedCrew.images.png}
           layout="fill"
           objectFit="contain"
           objectPosition="bottom"
-          className="relative border-b mt-6 border-[#383B4B] w-[327px] md:border-none md:w-full h-[222px] mx-auto md:h-[520px] md:pt-28 lg:w-[568px] lg:bottom-0 lg:absolute"
+          className="relative border-b mt-6 border-[#383B4B]  md:border-none w-full h-[222px] mx-auto md:h-[520px] md:pt-28 lg:w-[568px] lg:bottom-0 lg:absolute"
           alt="crew"
         />
 
-        <div className="md:flex md:flex-col-reverse lg:flex-col-reverse lg:gap-24 lg:justify-start w-full lg:pt-40">
+        <div className="md:flex md:flex-col-reverse lg:flex-col-reverse lg:gap-24 lg:justify-start w-full lg:pt-40 md:pt-[124px]">
           <ul className="text-light flex gap-4 justify-center lg:justify-start">
             {data.crew.map(staff => (
               <li key={staff.name} className="py-6">
