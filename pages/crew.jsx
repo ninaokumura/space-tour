@@ -16,13 +16,13 @@ export default function Crew() {
       title="Crew"
     >
       <Title num="02" title="Meet the crew" />
-      <div className="md:flex md:flex-col-reverse md:pt-14 lg:flex-row-reverse lg:items-center md:absolute md:bottom-0 lg:px-40 justify-between w-full border">
+      <div className="md:flex md:flex-col-reverse md:pt-14 lg:flex-row-reverse lg:items-center md:absolute md:bottom-0 lg:px-40 justify-between w-full">
         <Carousel
           src={selectedCrew.images.png}
           layout="fill"
           objectFit="contain"
           objectPosition="bottom"
-          className="relative border-b mt-6 border-[#383B4B] w-[327px] md:border-none md:w-full h-[222px] mx-auto md:h-[520px] md:pt-28 lg:w-[568px]"
+          className="relative border-b mt-6 border-[#383B4B] w-[327px] md:border-none md:w-full h-[222px] mx-auto md:h-[520px] md:pt-28 lg:w-[568px] lg:bottom-0 lg:absolute"
           alt="crew"
         />
 
