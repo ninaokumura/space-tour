@@ -22,7 +22,7 @@ export default function Home() {
             this world experience!
           </p>
         </div>
-        <div>
+        <div className="rounded-full p-20 hover:bg-white/10 transition-all">
           <Button
             title="Explore"
             className="bg-light w-[150px] h-[150px] md:w-[242px] md:h-[242px] lg:w-[274px] lg:h-[274px] lg:text-2xl flex justify-center items-center"

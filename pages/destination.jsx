@@ -38,7 +38,8 @@ export default function Destination() {
                 <li
                   key={destination.name}
                   className={clsx("uppercase", {
-                    "border-b": selectedName === destination.name,
+                    "border-b-2": selectedName === destination.name,
+                    "hover:border-b-2 hover:border-light/50": destination.name,
                   })}
                 >
                   <button onClick={() => setSelectedName(destination.name)}>

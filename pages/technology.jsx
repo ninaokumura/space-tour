@@ -48,6 +48,7 @@ export default function Technology() {
                       "w-10 h-10 md:w-[60px] md:h-[60px] lg:w-[80px] lg:h-[80px] text-light border border-[#383B4B]",
                       {
                         "bg-light text-dark": t.name === tech,
+                        "hover:border-light": t.name,
                       }
                     )}
                     onClick={() => setTech(t.name)}

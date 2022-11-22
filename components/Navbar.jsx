@@ -49,9 +49,10 @@ export default function Navbar() {
           <li
             key={link.num}
             className={clsx(
-              "font-barlow pb-8 text-light text-base tracking-[2.7px]",
+              "font-barlow pb-8 text-light text-base tracking-[2.7px] md:pb-[55px]",
               {
                 "md:border-b-2": link.href === router.asPath,
+                "md:hover:border-b-2 md:hover:border-light/50": link.href,
               }
             )}
           >
