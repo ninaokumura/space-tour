@@ -26,7 +26,7 @@ export default function Crew() {
           alt="crew"
         />
 
-        <div className="md:flex md:flex-col-reverse lg:flex-col-reverse lg:gap-24 lg:justify-start w-full lg:pt-40 md:pt-[124px]">
+        <div className="md:flex md:flex-col-reverse lg:flex-col-reverse lg:gap-24 lg:justify-start w-full lg:pt-40 border md:pt-[100px]">
           <ul className="text-light flex gap-4 justify-center lg:justify-start">
             {data.crew.map(staff => (
               <li key={staff.name} className="py-6">
