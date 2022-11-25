@@ -22,6 +22,7 @@ Users should be able to:
 - View each page and be able to toggle between the tabs to see new information
 
 ### Screenshot
+
 ![mobile-space](https://user-images.githubusercontent.com/79299205/203923926-09709d2e-258f-44f9-9a7c-c5dab0627fe5.JPG)
 
 ![tablet-space](https://user-images.githubusercontent.com/79299205/203923956-e8a72e61-1927-43fc-aa96-c78320d2b4bd.JPG)
@@ -30,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://space-tour-amber.vercel.app/technology)
+- Live Site URL: [Space tour](https://space-tour-amber.vercel.app/technology)
 
 ## My process
 
