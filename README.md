@@ -22,6 +22,11 @@ Users should be able to:
 - View each page and be able to toggle between the tabs to see new information
 
 ### Screenshot
+![mobile-space](https://user-images.githubusercontent.com/79299205/203923926-09709d2e-258f-44f9-9a7c-c5dab0627fe5.JPG)
+
+![tablet-space](https://user-images.githubusercontent.com/79299205/203923956-e8a72e61-1927-43fc-aa96-c78320d2b4bd.JPG)
+
+![desktop-space](https://user-images.githubusercontent.com/79299205/203923992-f8a20422-3f6a-4490-bd93-f8e9b9f5d293.JPG)
 
 ### Links
 
