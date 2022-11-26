@@ -35,7 +35,8 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="w-full">
+    <div className="w-full lg:flex lg:flex-col">
+      <div className="lg:border-b lg:z-10 lg:ml-20 lg:mr-[800px] lg:mt-16 lg:opacity-25" />
       <ul
         className={clsx(
           "gap-12 md:flex absolute bottom-0 md:max-h-24 top-0 right-0 md:py-10 md:px-12 lg:pr-[165px] lg:pl-[123px] bg-navbar backdrop-blur-[41px] lg:mt-10",
